@@ -254,13 +254,6 @@ ABOUT PAGE
 Includced in same file because of loading-time
 */
 
-#about-content {
-    margin: 0;
-}
-
-#about-content h1 {
-    margin: 0;
-}
 
 
 @media (max-width: 980px) {
