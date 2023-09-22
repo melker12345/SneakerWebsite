@@ -133,6 +133,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     width: 100vw;
     height: 100vh;
     padding: 5rem;
@@ -264,9 +265,11 @@ Includced in same file because of loading-time
     }
 
     .content {
-        top: 50%;
+        margin-top: 5rem;
     }
-
+    .content h1 {
+        font-size: 48px;
+    }
     .content p {
         margin: 4rem;
         max-width: 100%;
