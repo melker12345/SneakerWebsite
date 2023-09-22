@@ -81,13 +81,13 @@
 }
 
 button {
-  width: 200px;
+  width: 100px;
   padding: 15px 0;
   text-align: center;
   margin: 20px 10px;
-  border-radius: 25px;
+  border-radius: 20px;
   font-weight: bold;
-  border: 2px solid var(--blue);
+  border: 1px solid var(--blue);
   background: transparent;
   color: var(--white);
   cursor: pointer;
@@ -135,7 +135,6 @@ button:hover {
   flex-wrap: wrap;
   width: 100vw;
   height: 100vh;
-  padding: 5rem;
   margin-top: 10rem;
   margin-bottom: 10rem;
   overflow: hidden;
@@ -147,8 +146,6 @@ button:hover {
 }
 
 .product {
-  display: flex;
-  flex-direction: column;
   max-width: 100%;
   max-height: 100%;
   margin-top: 1rem;
@@ -172,7 +169,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   margin-top: 5rem;
-  margin-bottom: 10rem;
+
   width: 100%;
   max-height: 100%;
   background-color: inherit;
@@ -274,10 +271,8 @@ Includced in same file because of loading-time
     margin: 4rem;
     max-width: 100%;
   }
-
-  .product-section {
-    padding: 0;
-    margin: 0;
+  .product {
+    width: 500px;
   }
 
   .pruduct-text {
@@ -286,7 +281,21 @@ Includced in same file because of loading-time
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 375px) {
+  .product-section {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+  }
+
   .navbar {
     width: 100%;
     display: flex;
