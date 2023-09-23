@@ -116,87 +116,88 @@ button:hover {
 }
 
 /* Main page */
-
 .page {
-  overflow-x: hidden;
-  background-color: #0d0d0d;
-}
-
-.product img {
-  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 8rem;
+  row-gap: 8rem;
   height: auto;
-  margin-bottom: 1rem;
+  margin: 8rem 8rem 20rem 8rem;
+  max-width: 100%;
+  background-color: var(--white);
+  border-radius: 30px;
+
+grid-template-areas:
+"product-1 product-1 product-text-1 product-text-1 "
+"product-text-2 product-text-2 product-2 product-2 "
+"product-3 product-3 product-text-3 product-text-3"
+
 }
 
-.product-section {
+.pruduct-image  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+}
+
+.pruduct-image img {
+  width: 500px;
+  height: auto;
+  max-height: 100%;
+  margin: 20px;
+  padding: 20px;
+
+}
+
+.product-text {
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding: 40px;
+  padding-top: 50px;
   flex-wrap: wrap;
-  width: 100vw;
-  height: 100vh;
-  margin-top: 10rem;
-  margin-bottom: 10rem;
-  overflow: hidden;
-}
-
-.product-section:nth-child(2) {
-  border-bottom: var(--white) 1px solid;
-  border-top: var(--white) 1px solid;
-}
-
-.product {
   max-width: 100%;
-  max-height: 100%;
-  margin-top: 1rem;
-  padding: 3rem;
-  box-sizing: border-box;
-  text-align: center;
+  border-radius: 30px;
 }
 
-.product:nth-child(2) {
-  margin-bottom: 5rem;
+#product-1{
+  grid-area: product-1;
+
 }
 
-.product img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 1rem;
+#product-text-1 {
+  grid-area: product-text-1;
+  background-color: rgb(1, 255, 22);
+  color: white;
 }
 
-.pruduct-text-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5rem;
-
-  width: 100%;
-  max-height: 100%;
-  background-color: inherit;
+#product-2{
+  grid-area: product-2;
+}
+#product-text-2 {
+  grid-area: product-text-2;
+  background-color: rgb(5, 80, 255);
+  color: white;
+}
+#product-3{
+  grid-area: product-3;
+}
+#product-text-3{
+  grid-area: product-text-3;
+  background-color: rgb(255, 0, 0);
+  color: white;
 }
 
-.pruduct-text {
-  font-size: 50px;
-  color: var(--white);
-  text-align: center;
-  overflow: hidden;
-}
-
-.product-section a {
-  text-decoration: none;
-}
-
-.product:hover {
-  /* box-shadow is copyed from https://htmlcssfreebies.com/box-shadow-all-sides/ */
-  box-shadow: 14px -14px 255px 255px rgba(0, 255, 255, 0.053),
-    25px 0px 20px -20px rgba(0, 0, 0, 0.45),
-    0px 25px 20px -20px rgba(0, 0, 0, 0.45),
-    -25px 0px 20px -20px rgba(0, 0, 0, 0.45);
-
-  border-radius: 50px;
+.pruduct-image:hover {
+  box-shadow: #161616 3px 5px 8px;
+  border-radius: 30px;
   transform: scale(1.01);
   transition: 0.2s;
-}
+  } 
+
+
+/* FOOOOTER */
 
 .footer {
   overflow-y: hidden;
@@ -209,7 +210,7 @@ button:hover {
 
 .footer .row {
   width: 100%;
-  margin: 1% 0%;
+  margin: 1rem 0;
   padding: 0.6% 0%;
   color: gray;
   font-size: 0.8em;
@@ -222,7 +223,7 @@ button:hover {
 }
 
 .footer .row a:hover {
-  color: #fff;
+  color: var(--white);
 }
 
 .footer .row a i img {
@@ -247,7 +248,7 @@ button:hover {
 
 /* 
 ABOUT PAGE      
-Includced in same file because of loading-time
+Includced in same file for better loading-time
 */
 
 #about-content p {
@@ -271,14 +272,7 @@ Includced in same file because of loading-time
     margin: 4rem;
     max-width: 100%;
   }
-  .product {
-    width: 500px;
-  }
 
-  .pruduct-text {
-    font-size: 40px;
-    font-weight: 600;
-  }
 }
 
 @media (max-width: 375px) {
