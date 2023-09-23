@@ -140,15 +140,16 @@ grid-template-areas:
   align-items: center;
   justify-content: center;
   background-color: var(--white);
+  margin: 20px;
+  padding: 20px;
+  max-width: 100%;
 }
 
 .pruduct-image img {
   width: 500px;
   height: auto;
   max-height: 100%;
-  margin: 20px;
-  padding: 20px;
-
+  max-width: 100%;
 }
 
 .product-text {
@@ -255,7 +256,7 @@ Includced in same file for better loading-time
   font-size: 18px;
 }
 
-@media (max-width: 980px) {
+/* @media (max-width: 980px) {
   .navbar img {
     display: none;
   }
@@ -273,7 +274,7 @@ Includced in same file for better loading-time
     max-width: 100%;
   }
 
-}
+} */
 
 @media (max-width: 375px) {
   .product-section {
