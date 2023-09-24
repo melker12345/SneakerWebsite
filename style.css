@@ -87,7 +87,6 @@
   max-width: 50%;
 }
 
-
 /* Added a button that have cool css animation on hover but can't fide good use case :) */
 
 button {
@@ -125,7 +124,6 @@ button:hover {
   border: none;
 }
 
-
 /* Main page */
 
 .page {
@@ -142,14 +140,13 @@ button:hover {
 
   padding: 20px;
 
-grid-template-areas:
-"product-1 product-1 product-text-1 product-text-1 "
-"product-text-2 product-text-2 product-2 product-2 "
-"product-3 product-3 product-text-3 product-text-3"
-
+  grid-template-areas:
+    "product-1 product-1 product-text-1 product-text-1 "
+    "product-text-2 product-text-2 product-2 product-2 "
+    "product-3 product-3 product-text-3 product-text-3";
 }
 
-.pruduct-image  {
+.pruduct-image {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -176,7 +173,7 @@ grid-template-areas:
   border-radius: 30px;
 }
 
-#product-1{
+#product-1 {
   grid-area: product-1;
 }
 
@@ -186,7 +183,7 @@ grid-template-areas:
   color: white;
 }
 
-#product-2{
+#product-2 {
   grid-area: product-2;
 }
 #product-text-2 {
@@ -194,10 +191,10 @@ grid-template-areas:
   background-color: rgb(1, 255, 22);
   color: white;
 }
-#product-3{
+#product-3 {
   grid-area: product-3;
 }
-#product-text-3{
+#product-text-3 {
   grid-area: product-text-3;
   background-color: rgb(5, 80, 255);
   color: white;
@@ -208,8 +205,7 @@ grid-template-areas:
   border-radius: 30px;
   transform: scale(1.01);
   transition: 0.2s;
-  } 
-
+}
 
 /* FOOOOTER */
 
@@ -260,21 +256,20 @@ grid-template-areas:
   margin: 0% 1%;
 }
 
-
-@media only screen and (max-width:768px){
-  .page{
-      margin: 20px;
-      padding: 5rem;
-      grid-template-columns: 1fr;
-      grid-template-rows: 4fr;
-      row-gap: 3rem;
-      grid-template-areas:
+@media only screen and (max-width: 768px) {
+  .page {
+    margin: 20px;
+    padding: 5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr;
+    row-gap: 3rem;
+    grid-template-areas:
       "product-1"
       "product-text-1"
       "product-2"
       "product-text-2"
       "product-3"
-      "product-text-3"
+      "product-text-3";
   }
 
   .navbar {
@@ -299,20 +294,17 @@ grid-template-areas:
   }
 }
 
-
 @media screen and (min-width: 769px) and (max-width: 1025px) {
-
-  .page{
-      padding: 5rem;
-      grid-template-columns: 1fr;
-      grid-template-rows: 6fr;
-      grid-template-areas:
+  .page {
+    padding: 5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 6fr;
+    grid-template-areas:
       "product-1"
       "product-text-1"
       "product-2"
       "product-text-2"
       "product-3"
-      "product-text-3"
+      "product-text-3";
   }
-
 }

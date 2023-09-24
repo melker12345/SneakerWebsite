@@ -11,7 +11,6 @@ body {
   background-color: #101010;
   margin: 0;
   overflow-x: hidden;
-  
 }
 
 .navbar {
@@ -59,12 +58,12 @@ body {
 
 .banner {
   width: 100%;
-  height: fit-content;
+  height: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)),
     url(img/background.png);
   background-size: cover;
   background-position: center;
-  height: fit-content;
+
 }
 
 .product-grid {
@@ -136,12 +135,9 @@ body {
   transition: 0.2s;
 }
 
-footer{
-
+footer {
   width: 100%;
-
 }
-
 
 .footer {
   overflow-y: hidden;
