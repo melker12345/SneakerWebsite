@@ -7,14 +7,18 @@
   --white: #f1f1f1;
 }
 
+/* Background image  */
+
 .banner {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)),
     url(img/background.png);
   background-size: cover;
   background-position: center;
 }
+
+/* Nav-bar */
 
 .navbar {
   width: 85%;
@@ -42,6 +46,7 @@
   text-transform: uppercase;
 }
 
+/* The animation for my fake button */
 .navbar ul li::after {
   content: "";
   height: 3px;
@@ -56,6 +61,8 @@
 .navbar ul li:hover::after {
   width: 100%;
 }
+
+/* Content on my Hero-section */
 
 .content {
   width: 100%;
@@ -79,6 +86,9 @@
   line-height: 25px;
   max-width: 50%;
 }
+
+
+/* Added a button that have cool css animation on hover but can't fide good use case :) */
 
 button {
   width: 100px;
@@ -115,7 +125,9 @@ button:hover {
   border: none;
 }
 
+
 /* Main page */
+
 .page {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -127,6 +139,8 @@ button:hover {
   max-width: 100%;
   background-color: var(--white);
   border-radius: 30px;
+
+  padding: 20px;
 
 grid-template-areas:
 "product-1 product-1 product-text-1 product-text-1 "
@@ -164,12 +178,11 @@ grid-template-areas:
 
 #product-1{
   grid-area: product-1;
-
 }
 
 #product-text-1 {
   grid-area: product-text-1;
-  background-color: rgb(1, 255, 22);
+  background-color: rgb(255, 0, 0);
   color: white;
 }
 
@@ -178,7 +191,7 @@ grid-template-areas:
 }
 #product-text-2 {
   grid-area: product-text-2;
-  background-color: rgb(5, 80, 255);
+  background-color: rgb(1, 255, 22);
   color: white;
 }
 #product-3{
@@ -186,7 +199,7 @@ grid-template-areas:
 }
 #product-text-3{
   grid-area: product-text-3;
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(5, 80, 255);
   color: white;
 }
 
@@ -247,48 +260,21 @@ grid-template-areas:
   margin: 0% 1%;
 }
 
-/* 
-ABOUT PAGE      
-Includced in same file for better loading-time
-*/
 
-#about-content p {
-  font-size: 18px;
-}
-
-/* @media (max-width: 980px) {
-  .navbar img {
-    display: none;
-  }
-
-  .content {
-    margin-top: 5rem;
-  }
-
-  .content h1 {
-    font-size: 48px;
-  }
-
-  .content p {
-    margin: 4rem;
-    max-width: 100%;
-  }
-
-} */
-
-@media (max-width: 375px) {
-  .product-section {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-  }
-
-  .product {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
+@media only screen and (max-width:768px){
+  .page{
+      margin: 20px;
+      padding: 5rem;
+      grid-template-columns: 1fr;
+      grid-template-rows: 4fr;
+      row-gap: 3rem;
+      grid-template-areas:
+      "product-1"
+      "product-text-1"
+      "product-2"
+      "product-text-2"
+      "product-3"
+      "product-text-3"
   }
 
   .navbar {
@@ -311,4 +297,22 @@ Includced in same file for better loading-time
   .footer .row a i {
     margin: 0% 3%;
   }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1025px) {
+
+  .page{
+      padding: 5rem;
+      grid-template-columns: 1fr;
+      grid-template-rows: 6fr;
+      grid-template-areas:
+      "product-1"
+      "product-text-1"
+      "product-2"
+      "product-text-2"
+      "product-3"
+      "product-text-3"
+  }
+
 }

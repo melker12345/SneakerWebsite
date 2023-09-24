@@ -8,8 +8,10 @@
 }
 
 body {
+  background-color: #101010;
   margin: 0;
   overflow-x: hidden;
+  
 }
 
 .navbar {
@@ -62,6 +64,7 @@ body {
     url(img/background.png);
   background-size: cover;
   background-position: center;
+  height: fit-content;
 }
 
 .product-grid {
@@ -69,6 +72,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 5rem;
+  margin-bottom: 10rem;
 }
 
 .card {
@@ -131,6 +135,13 @@ body {
   transform: scale(1.02);
   transition: 0.2s;
 }
+
+footer{
+
+  width: 100%;
+
+}
+
 
 .footer {
   overflow-y: hidden;
